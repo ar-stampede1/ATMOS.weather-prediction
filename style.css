@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'DM Sans', sans-serif !important;
+    color: #cbd5e1;
+}
+
+.stApp {
+    background: #0f1f2e;
+    background-image:
+        radial-gradient(ellipse 70% 45% at 10% 0%, rgba(56,189,248,0.09) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 40% at 90% 100%, rgba(129,140,248,0.08) 0%, transparent 55%);
+}
+
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+.block-container { padding: 2.5rem 3rem 4rem !important; max-width: 1300px !important; }
+
+/* ─── HERO ─── */
+.hero { text-align: center; padding: 2.5rem 0 1rem; }
+.hero-eyebrow {
+    font-family: 'Orbitron', monospace;
+    font-size: 11px; letter-spacing: 5px; color: #38bdf8;
+    text-transform: uppercase; margin-bottom: 0.6rem; opacity: 0.85;
+}
+.hero-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(38px, 6vw, 72px); font-weight: 800;
+    background: linear-gradient(135deg, #e2e8f0 25%, #38bdf8 58%, #818cf8 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; line-height: 1.05; margin: 0; letter-spacing: -1px;
+}
+.hero-sub { font-size: 15px; color: #64748b; margin-top: 0.75rem; font-weight: 300; }
+.hero-line {
+    width: 60px; height: 2px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    margin: 1.5rem auto 0; border-radius: 2px;
+}
+
+/* ─── SECTION LABELS ─── */
+.section-label {
+    font-family: 'Orbitron', monospace; font-size: 10.5px;
+    letter-spacing: 3.5px; color: #38bdf8; text-transform: uppercase;
+    margin-bottom: 1.4rem; display: flex; align-items: center; gap: 10px;
+}
+.section-label::after { content: ''; flex: 1; height: 1px; background: rgba(56,189,248,0.15); }
+
+/* ─── COLUMN GLASS CARDS ─── */
+div[data-testid="column"] > div[data-testid="stVerticalBlock"] {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(56,189,248,0.18);
+    border-radius: 20px;
+    padding: 1.8rem 1.8rem 2rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.06) inset;
+}
+div[data-testid="column"] > div[data-testid="stVerticalBlock"]::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(56,189,248,0.35), transparent);
+}
+
+/* ─── INPUTS ─── */
+div[data-testid="stNumberInput"] label,
+div[data-testid="stSelectbox"] label {
+    font-size: 11px !important; font-weight: 600 !important;
+    color: #64748b !important; text-transform: uppercase; letter-spacing: 1.5px;
+}
+div[data-testid="stNumberInput"] input,
+div[data-testid="stSelectbox"] > div > div {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(56,189,248,0.2) !important;
+    border-radius: 10px !important; color: #e2e8f0 !important;
+    font-family: 'DM Sans', sans-serif !important; font-size: 15px !important;
+}
+div[data-testid="stNumberInput"] input:focus {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 0 3px rgba(56,189,248,0.12) !important;
+}
+
+/* ─── BUTTON ─── */
+div.stButton > button {
+    width: 100%;
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%) !important;
+    color: #0f172a !important; font-family: 'Orbitron', monospace !important;
+    font-size: 13px !important; font-weight: 700 !important;
+    letter-spacing: 3px !important; text-transform: uppercase;
+    border: none !important; border-radius: 12px !important;
+    padding: 0.85rem 1rem !important; height: auto !important;
+    box-shadow: 0 4px 24px rgba(56,189,248,0.3) !important;
+    transition: transform 0.15s, box-shadow 0.15s !important;
+}
+div.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 36px rgba(56,189,248,0.45) !important;
+}
+div.stButton > button:active { transform: translateY(0) !important; }
+
+/* ─── RESULT CARD ─── */
+.result-card {
+    background: linear-gradient(135deg, rgba(56,189,248,0.07), rgba(129,140,248,0.07));
+    border: 1px solid rgba(56,189,248,0.25); border-radius: 16px;
+    padding: 2rem; text-align: center; position: relative;
+    overflow: hidden; margin-bottom: 1.5rem;
+}
+.result-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(56,189,248,0.1), transparent 65%);
+    pointer-events: none;
+}
+.result-icon { font-size: 62px; line-height: 1; margin-bottom: 0.6rem; }
+.result-label {
+    font-family: 'Orbitron', monospace; font-size: 22px; font-weight: 700;
+    background: linear-gradient(135deg, #f1f5f9 35%, #38bdf8);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.result-sub { font-size: 12px; color: #64748b; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+
+/* ─── CONFIDENCE BARS ─── */
+.conf-row { display: flex; align-items: center; gap: 12px; margin-bottom: 0.85rem; }
+.conf-name { font-size: 12px; color: #94a3b8; width: 90px; flex-shrink: 0; font-weight: 500; }
+.conf-track { flex: 1; height: 6px; background: rgba(255,255,255,0.07); border-radius: 99px; overflow: hidden; }
+.conf-fill {
+    height: 100%; border-radius: 99px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    box-shadow: 0 0 6px rgba(56,189,248,0.35);
+}
+.conf-pct { font-family: 'Orbitron', monospace; font-size: 11px; color: #38bdf8; width: 42px; text-align: right; }
+
+/* ─── CHIPS ─── */
+.chips-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem; }
+.chip {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(56,189,248,0.18);
+    border-radius: 99px; padding: 6px 14px; font-size: 12px; color: #64748b;
+    display: flex; align-items: center; gap: 6px;
+}
+.chip strong { color: #cbd5e1; font-weight: 600; }
+
+/* ─── IDLE STATE ─── */
+.idle-state { text-align: center; padding: 3rem 1rem; color: #475569; }
+.idle-state .big-icon { font-size: 56px; opacity: 0.2; margin-bottom: 1rem; }
+.idle-state p { font-size: 13px; letter-spacing: 0.3px; }
+
+/* ─── DIVIDER ─── */
+.my-divider { height: 1px; background: rgba(56,189,248,0.12); margin: 1.5rem 0; }
+
+/* ─── CONFIDENCE NOTE ─── */
+.conf-note {
+    margin-top: 1.5rem; padding: 14px 16px;
+    background: rgba(56,189,248,0.06);
+    border: 1px solid rgba(56,189,248,0.18);
+    border-radius: 10px; font-size: 13px; color: #64748b;
+}
+.conf-note strong { color: #38bdf8; font-family: 'Orbitron', monospace; }
+
+/* ─── FOOTER ─── */
+.footer {
+    text-align: center; margin-top: 3rem; font-size: 11px;
+    color: #334155; letter-spacing: 1.5px; text-transform: uppercase;
+}

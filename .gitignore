@@ -1,0 +1,60 @@
+# ===============================
+# Python cache files
+# ===============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ===============================
+# Virtual environments
+# ===============================
+venv/
+env/
+ENV/
+.venv/
+.anaconda/
+.conda/
+
+# ===============================
+# Jupyter Notebook checkpoints
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# System files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Streamlit cache
+# ===============================
+.streamlit/
+
+# ===============================
+# Model training junk
+# ===============================
+*.log
+*.tmp
+
+# ===============================
+# IDE folders
+# ===============================
+.vscode/
+.idea/
+
+# ===============================
+# Large datasets (optional)
+# ===============================
+data/
+datasets/
+
+# ===============================
+# Python build files
+# ===============================
+build/
+dist/
+*.egg-info/
+weather_tuning/
+model_config.json
+Weather_prediction_project(ann_multiclassification).ipynb
